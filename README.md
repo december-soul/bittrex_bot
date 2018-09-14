@@ -27,3 +27,47 @@ bittrex SL TP Stoploss Takeprofit trading bot
 
 # Install
 edit the trading.py file to add your bittrex key and secret. This must allow trading
+
+# Output
+```
+python trade.py --coin=ETH --quantity=0.1 --takeprofit=0.049 --stoploss=0.029 --trailingstopstart=0.03194 --trailingstopstep=0.0002 --tryrun
+
+[+] handle BTC-ETH
+
+[+] number of coins to sell 0.10000000 ETH
+
+[+] Takeprofit set to 0.04900000 BTC/ETH
+
+[+] Stop Loss set to 0.02900000 BTC/ETH
+
+[+] Traling Stop will start at 0.03194000 BTC/ETH
+
+[+] Traling Stop will move Stop Loss 0.00020000 steps after the current price
+
+Enter "go" to continue. WARNING!!! CONTINUE ON YOUR OWN RISK AND ONLY IF YOU KNOW WHAT WILL HAPPEN!!!
+go
+
+2018-09-14 15:28:34    ETH Current Price: 0.03183997 BTC (TP=0.04900000, SL=0.02900000)
+
+...
+
+2018-09-14 15:41:51    ETH Current Price: 0.03193453 BTC (TP=0.04900000, SL=0.02900000)
+
+2018-09-14 15:41:53    ETH Current Price: 0.03195140 BTC (TP=0.04900000, SL=0.02900000)
+>>TrailingStop: new stop loos reached. current price 0.03195140 BTC, old SL=0.02900000 TrailingStopSteps=0.00020000 new SL=0.03175140
+
+2018-09-14 15:41:55    ETH Current Price: 0.03195140 BTC (TP=0.04900000, SL=0.03175140)
+
+2018-09-14 15:41:57    ETH Current Price: 0.03195140 BTC (TP=0.04900000, SL=0.03175140)
+
+...
+
+2018-09-14 15:42:27    ETH Current Price: 0.03187241 BTC (TP=0.04900000, SL=0.03175140)
+
+2018-09-14 15:42:29    ETH Current Price: 0.03199592 BTC (TP=0.04900000, SL=0.03175140)
+>>TrailingStop: new stop loos reached. current price 0.03199592 BTC, old SL=0.03175140 TrailingStopSteps=0.00020000 new SL=0.03179592
+
+2018-09-14 15:42:31    ETH Current Price: 0.03199592 BTC (TP=0.04900000, SL=0.03179592)
+
+2018-09-14 15:42:33    ETH Current Price: 0.03199592 BTC (TP=0.04900000, SL=0.03179592)
+```
